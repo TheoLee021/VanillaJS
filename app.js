@@ -1,38 +1,14 @@
-const title = document.querySelector(".hello h1");
-
-function handleTitleClick() {
-    title.style.color = "blue";
-    console.log("title was clicked!");
+function handleResize() {
+    document.body.classList.remove('small-screen', 'medium-screen', 'large-screen');
+    
+    if (window.innerWidth < 800) {
+        document.body.classList.add('small-screen');
+    } else if (window.innerWidth < 1200) {
+        document.body.classList.add('medium-screen');
+    } else {
+        document.body.classList.add('large-screen');
+    }
 }
 
-function handleMouseEnter() {
-    title.innerText = "Mouse is here!";
-}
-
-function handleMouseLeave() {
-    title.innerText = "Mouse is gone!";
-}
-
-function handleWindowResize() {
-    document.body.style.backgroundColor = "tomato";
-}
-
-function handleWindowCopy() {
-    alert("copied!");
-}
-
-function handleWindowOffline() {
-    alert("SOS no WIFI");
-}
-
-function handleWindowOnline() {
-    alert("WIFI connected");
-}
-
-title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
-window.addEventListener("offline", handleWindowOffline);
-window.addEventListener("online", handleWindowOnline);
+window.addEventListener("resize", handleResize);
+document.addEventListener('DOMContentLoaded', handleResize);

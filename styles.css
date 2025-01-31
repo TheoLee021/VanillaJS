@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+    color: white;
+}
+
+.small-screen {
+    background-color: #3498db;
+}
+
+.medium-screen {
+    background-color: #8a2be2;
+}
+
+.large-screen {
+    background-color: #f5ddad;
+}
