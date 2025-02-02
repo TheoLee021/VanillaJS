@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Number Game</title>
+</head>
+<body>
+    <h1>Random Number Game</h1>
+    <div class="game-container-range">
+        Generate a number between 0 and 
+        <form id="range-form">
+            <input type="number" id="range" min="1" max="100" required />
+        </form>
+        <span id="range-error" class="error hidden">Please set the maximum range first!</span>
+    </div>
+    <div class="game-container-guess">
+        Guess the number: 
+        <form id="guess-form">
+            <input type="number" id="guess" min="0" max="100" required />
+            <button id="submit">Play!</button>
+        </form>
+    </div>
+    <p id="chosen-number-display" class="hidden">You chose: <span id="user-number-display"></span>, the machine chose: <span id="machine-number-display"></span></p>
+    <p id="result" class="hidden"></p>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.hidden {
+    display: none;
+}
+
+form {
+    display: inline;
+}
+
+#result {
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100px;
+}
+
+.game-container-range {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
