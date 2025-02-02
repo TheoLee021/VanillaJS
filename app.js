@@ -1,11 +1,11 @@
-// Constants
-const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username";
-
 // DOM Elements
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#username-input");
 const greeting = document.querySelector("#greeting");
+
+// Constants
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
 function loginSubmit(event) {
     // Prevent the default behavior of the form
