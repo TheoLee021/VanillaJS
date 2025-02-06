@@ -43,8 +43,7 @@ const quotes = [
         author: "Albert Einstein"
     },
 ]
-const randomNumber = Math.floor(Math.random() * quotes.length);
-const todaysQuote = quotes[randomNumber];
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;

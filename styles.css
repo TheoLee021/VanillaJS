@@ -7,12 +7,16 @@ body {
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 #login-form {
@@ -50,6 +54,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 80%;
+    text-align: center;
 }
 
 #quote span:first-child {
@@ -61,4 +67,14 @@ main {
 #quote span:last-child {
     font-size: 15px;
     font-weight: 400;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
