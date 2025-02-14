@@ -3,6 +3,7 @@ const todoList = document.querySelector("#todo-list");
 const todoInput = document.querySelector("#todo-form input");
 
 const toDos = [];
+const TODOS_KEY = "todos";
 
 function saveToDos() {
     localStorage.setItem("todos", JSON.stringify(toDos));
@@ -35,3 +36,9 @@ function deleteTodo(event) {
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+if (savedToDos) {
+    const parsedToDos = JSON.parse(savedToDos);
+}
