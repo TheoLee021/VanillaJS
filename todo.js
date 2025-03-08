@@ -41,10 +41,10 @@ function handleTodoSubmit(event) {
 // handle the click event of the delete button
 function deleteTodo(event) {
     const li = event.target.parentElement;
-    // get li's id
-    const deleteId = li.id;
     // delete the todo item from the todoList array
     li.remove();
+    toDos = toDos.filter((todo) => todo.id !== parseInt(li.id))
+    saveToDos();
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
@@ -54,5 +54,5 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
-    parsedToDos.forEach(addToDo);
+    parsedToDos.forEach(addTodo);
 }
